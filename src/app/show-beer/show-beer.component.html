@@ -1,0 +1,35 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<div *ngIf="selectedBeerInfo && selectedBeerInfo.selected">
+  <div class="container">
+
+    <div class="form_container">
+      <div class="title not-selectable">Selected beer</div>
+
+      <form autocomplete="on">
+        <fieldset>
+          <h2 style="color:white">Name: {{selectedBeerInfo.selected.name}}</h2>      
+        </fieldset>
+
+        <fieldset>
+          <h2 style=color:white>First Brwed: {{selectedBeerInfo.selected.first_brewed}}</h2>  
+        </fieldset>
+
+
+        <fieldset>
+          <a href="{{selectedBeerInfo.selected.image_url}}" style="color: white;font-size: 1.7em">Image</a>
+        </fieldset>
+
+        <fieldset class="dropdown" style="text-align-last:center">
+          <h2 style="color:white" >Description </h2>
+          <div class="dropdown-content" style="color: aliceblue">
+          <p>{{selectedBeerInfo.selected.description}}</p>
+          </div>
+          
+        </fieldset>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
